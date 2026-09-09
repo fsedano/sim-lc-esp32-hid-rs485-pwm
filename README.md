@@ -10,8 +10,12 @@ GND to an external low-pass filter and AC-coupled amplifier.
 
 Release `.bin` assets are encrypted [aes-gw2](https://github.com/fsedano/aes-gw2)
 OTA containers, not raw ESP-IDF flash images. Application board ID: `hid.mbus485.pwm`;
-recovery board ID: `BL-hid.mbus485.pwm`. These releases contain firmware only.
+recovery board ID: `BL-hid.mbus485.pwm`. Releases also include a matching host simulator.
 
 The initial version is a bench prerelease; hardware waveform/load testing is
 pending. The analog sweep runs without a gateway connection. Runtime analog
 amplitude commands and a stream-loss timeout are not implemented yet.
+
+The host simulator prints the current commanded amplitude to stdout while
+running the same five-second up/down bench sweep. Its release asset is built
+for the publishing machine’s operating system and architecture.
